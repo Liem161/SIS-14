@@ -1,19 +1,19 @@
 [game]
-hostname = "[RU]Ванилла Space Axolotl [LRP][MRP]"
+hostname = "😂 Skill Issue Station [RU][LRP]"
 desc = "Этот сервер - попытка показать русскому сообществу игры, что есть другая сторона, без душных правил и администраторов, где можно веселиться и наслаждаться игрой. Это достигнуто с помощью лишь перевода оффициальной сборки игры, у которой приятный баланс и простые правила."
-maxplayers = 150
+maxplayers = 100
 soft_max_players = 50
 map_rotation = true
 role_timers = false
 
 [infolinks]
-bug_report = "https://github.com/space-wizards/space-station-14/issues/new/choose"
-discord    = "https://discord.gg/KtHkxwrFnU"
-github     = "https://github.com/lzk228/space-axolotl-14"
-appeal     = "https://discord.gg/KtHkxwrFnU"
+bug_report = "https://github.com/Shegare/SIS-14/issues/new/choose"
+discord    = "https://discord.gg/ZU2wCTA7gt"
+github     = "https://github.com/Shegare/SIS-14"
+appeal     = "https://discord.com/channels/1439525550032031806/1441447000636788899"
 
 [server]
-rules_file = "AxolotlRuleset"
+rules_file = "SISRuleset"
 
 [rules]
 time = 60.0
@@ -31,7 +31,7 @@ new_player_threshold = 600
 alert.min_players_sharing_connection = 2
 
 [atmos]
-max_explosion_range = 5
+max_explosion_range = 10
 
 [shuttle]
 emergency_early_launch_allowed = true

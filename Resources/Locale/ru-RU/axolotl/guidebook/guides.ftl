@@ -1,1 +1,1 @@
-guide-entry-axolotl-rules-bans = Баны
+guide-entry-SIS-rules-bans = Баны
