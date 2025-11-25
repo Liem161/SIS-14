@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/04/2025 19:49:34
-  entityCount: 23872
+  time: 11/25/2025 19:09:17
+  entityCount: 23873
 maps:
 - 5350
 grids:
@@ -11783,7 +11783,7 @@ entities:
       pos: 34.5,45.5
       parent: 30
     - type: Door
-      secondsUntilStateChange: -47753.46
+      secondsUntilStateChange: -47802.53
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -69645,6 +69645,13 @@ entities:
     - type: Transform
       pos: 26.5,-24.5
       parent: 30
+- proto: GasMinerPlasma
+  entities:
+  - uid: 2001
+    components:
+    - type: Transform
+      pos: 26.5,-30.5
+      parent: 30
 - proto: GasMinerWaterVapor
   entities:
   - uid: 8692
@@ -109406,6 +109413,11 @@ entities:
     - type: Transform
       pos: 27.5,-30.5
       parent: 30
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
+      - - Engineering
+      - - Research
   - uid: 23823
     components:
     - type: Transform
