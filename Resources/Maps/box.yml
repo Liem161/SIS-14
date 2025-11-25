@@ -4,8 +4,8 @@ meta:
   engineVersion: 267.3.0
   forkId: ""
   forkVersion: ""
-  time: 11/04/2025 19:45:51
-  entityCount: 28789
+  time: 11/25/2025 04:35:10
+  entityCount: 28790
 maps:
 - 780
 grids:
@@ -91386,6 +91386,14 @@ entities:
       parent: 8364
     - type: GasMiner
       maxExternalPressure: 4500
+- proto: GasMinerPlasma
+  entities:
+  - uid: 5089
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 27.5,-47.5
+      parent: 8364
 - proto: GasMinerWaterVapor
   entities:
   - uid: 16806
@@ -134948,6 +134956,11 @@ entities:
     - type: Transform
       pos: 28.5,-47.5
       parent: 8364
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
+      - - Engineering
+      - - Research
   - uid: 3611
     components:
     - type: Transform
