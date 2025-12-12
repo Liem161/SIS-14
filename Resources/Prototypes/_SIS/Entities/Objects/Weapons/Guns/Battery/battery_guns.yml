@@ -1,0 +1,9 @@
+- type: entity
+  parent: WeaponDisablerSMG
+  id: WeaponDisablerSMGRechargable
+  name: rechargable disabler SMG
+  description: Advanced weapon that exhausts organic targets, weakening them until they collapse. It recharges over time.
+  components:
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 6
