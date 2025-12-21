@@ -8,9 +8,9 @@
   productEntity: SyndiHypo
   discountCategory: rareDiscounts
   discountDownTo:
-    Telecrystal: 10
-  cost:
     Telecrystal: 12
+  cost:
+    Telecrystal: 14
   categories:
   - UplinkChemicals
   conditions:
