@@ -37,3 +37,18 @@
     blacklist:
       components:
       - SurplusBundle
+
+# Guns
+
+- type: listing
+  id: FireAxeFlaming
+  name: uplink-FireAxeFlaming
+  description: uplink-FireAxeFlaming.desc
+  productEntity: FireAxeFlaming
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 10
+  cost:
+    Telecrystal: 13
+  categories:
+  - UplinkWeaponry
