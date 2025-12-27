@@ -158,7 +158,7 @@
   parent: OfficeChairBase
   components:
   - type: Sprite
-    sprite: _SIS/Structures/Furniture/chairs.rsi
+    sprite: _SIS/Structures/Furniture/chairs.rsi # SIS_Chair
     state: office-white
   - type: Construction
     graph: Seat
@@ -170,7 +170,7 @@
   parent: ChairOfficeLight
   components:
   - type: Sprite
-    sprite: _SIS/Structures/Furniture/chairs.rsi
+    sprite: _SIS/Structures/Furniture/chairs.rsi # SIS_Chair
     state: office-dark
   - type: Construction
     graph: Seat
