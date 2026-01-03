@@ -18,6 +18,7 @@
     - Human
     - Moth
     - Reptilian
+    - Kobold # SIS-Kobold
     - Vulpkanin
 
 - type: loadoutEffectGroup
