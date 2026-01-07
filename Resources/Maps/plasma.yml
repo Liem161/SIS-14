@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 270.0.0
+  engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/28/2025 21:35:23
-  entityCount: 26487
+  time: 01/07/2026 18:43:00
+  entityCount: 26489
 maps:
 - 1
 grids:
@@ -14968,7 +14968,7 @@ entities:
       pos: -131.5,-45.5
       parent: 2
     - type: Door
-      secondsUntilStateChange: -64586.55
+      secondsUntilStateChange: -64759.355
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -66848,11 +66848,6 @@ entities:
       parent: 2
 - proto: ComputerCargoBounty
   entities:
-  - uid: 4728
-    components:
-    - type: Transform
-      pos: -84.5,31.5
-      parent: 2
   - uid: 19545
     components:
     - type: Transform
@@ -66863,8 +66858,11 @@ entities:
   - uid: 4727
     components:
     - type: Transform
-      pos: -85.5,31.5
+      pos: -84.5,31.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Cargo
   - uid: 5568
     components:
     - type: Transform
@@ -67217,11 +67215,10 @@ entities:
     - type: Transform
       pos: -90.5,25.5
       parent: 2
-  - uid: 26345
+  - uid: 21476
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: -96.5,32.5
+      pos: -94.5,43.5
       parent: 2
 - proto: ComputerResearchAndDevelopment
   entities:
@@ -67259,6 +67256,9 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -96.5,33.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Salvage
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 16998
@@ -67284,6 +67284,19 @@ entities:
     components:
     - type: Transform
       pos: -91.5,25.5
+      parent: 2
+- proto: ComputerShuttleSalvage
+  entities:
+  - uid: 4728
+    components:
+    - type: Transform
+      pos: -85.5,31.5
+      parent: 2
+  - uid: 20536
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: -96.5,32.5
       parent: 2
 - proto: ComputerSolarControl
   entities:
@@ -84605,6 +84618,11 @@ entities:
       parent: 2
     missingComponents:
     - GasMiner
+  - uid: 21087
+    components:
+    - type: Transform
+      pos: -110.5,2.5
+      parent: 2
   - uid: 21477
     components:
     - type: MetaData
@@ -130265,6 +130283,11 @@ entities:
     - type: Transform
       pos: -129.5,1.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
+      - - Engineering
+      - - Research
 - proto: NodeScanner
   entities:
   - uid: 7393
@@ -147756,6 +147779,11 @@ entities:
     - type: Transform
       pos: -129.5,3.5
       parent: 2
+    - type: AccessReader
+      accessListsOriginal:
+      - - Atmospherics
+      - - Engineering
+      - - Research
 - proto: SubstationBasic
   entities:
   - uid: 2020
@@ -171105,7 +171133,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -264693.3
+      secondsUntilStateChange: -264866.12
       state: Opening
     - type: Airlock
       autoClose: False

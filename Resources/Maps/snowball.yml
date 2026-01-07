@@ -4,8 +4,8 @@ meta:
   engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/19/2025 00:12:07
-  entityCount: 18235
+  time: 01/07/2026 18:39:01
+  entityCount: 18236
 maps:
 - 1793
 grids:
@@ -43439,6 +43439,9 @@ entities:
     - type: Transform
       pos: 81.5,91.5
       parent: 1
+    - type: AccessReader
+      accessListsOriginal:
+      - - Quartermaster
   - uid: 8084
     components:
     - type: Transform
@@ -43452,11 +43455,17 @@ entities:
     - type: Transform
       pos: 84.5,78.5
       parent: 1
+    - type: AccessReader
+      accessListsOriginal:
+      - - Cargo
   - uid: 8082
     components:
     - type: Transform
       pos: 80.5,91.5
       parent: 1
+    - type: AccessReader
+      accessListsOriginal:
+      - - Cargo
   - uid: 8083
     components:
     - type: Transform
@@ -43678,12 +43687,6 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 92.5,96.5
       parent: 1
-  - uid: 8015
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 86.5,92.5
-      parent: 1
 - proto: ComputerResearchAndDevelopment
   entities:
   - uid: 15917
@@ -43736,13 +43739,16 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 90.5,94.5
       parent: 1
+    - type: AccessReader
+      accessListsOriginal:
+      - - Salvage
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 7835
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
-      pos: 90.5,95.5
+      rot: 3.141592653589793 rad
+      pos: 86.5,92.5
       parent: 1
 - proto: ComputerShuttleCargo
   entities:
@@ -43757,6 +43763,20 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 87.5,77.5
+      parent: 1
+- proto: ComputerShuttleSalvage
+  entities:
+  - uid: 8015
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 90.5,95.5
+      parent: 1
+  - uid: 8044
+    components:
+    - type: Transform
+      rot: -1.5707963267948966 rad
+      pos: 87.5,76.5
       parent: 1
 - proto: ComputerStationRecords
   entities:
@@ -56113,6 +56133,13 @@ entities:
     - type: Transform
       rot: 1.5707963267948966 rad
       pos: 44.5,93.5
+      parent: 1
+- proto: GasMinerPlasma
+  entities:
+  - uid: 8054
+    components:
+    - type: Transform
+      pos: 44.5,97.5
       parent: 1
 - proto: GasMixerFlipped
   entities:
@@ -86140,10 +86167,10 @@ entities:
       parent: 1
 - proto: PaperBin10
   entities:
-  - uid: 8054
+  - uid: 18236
     components:
     - type: Transform
-      pos: 87.5,76.5
+      pos: 85.5,78.5
       parent: 1
 - proto: PaperBin20
   entities:
@@ -87494,11 +87521,6 @@ entities:
       parent: 1
 - proto: PottedPlant13
   entities:
-  - uid: 8037
-    components:
-    - type: Transform
-      pos: 85.5,78.5
-      parent: 1
   - uid: 15112
     components:
     - type: Transform
@@ -99639,11 +99661,10 @@ entities:
     - type: Transform
       pos: 53.5,60.5
       parent: 1
-  - uid: 8044
+  - uid: 8037
     components:
     - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 87.5,76.5
+      pos: 85.5,78.5
       parent: 1
   - uid: 9624
     components:

@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 269.0.1
+  engineVersion: 268.0.0
   forkId: ""
   forkVersion: ""
-  time: 12/23/2025 21:10:24
-  entityCount: 23881
+  time: 01/07/2026 18:35:52
+  entityCount: 23884
 maps:
 - 5350
 grids:
@@ -2046,6 +2046,19 @@ entities:
             2452: -42,-17
         - node:
             cleanable: True
+            color: '#A4610696'
+            id: DirtHeavyMonotile
+          decals:
+            3418: 24,-10
+        - node:
+            cleanable: True
+            color: '#A4610696'
+            id: DirtLight
+          decals:
+            3419: 25,-10
+            3420: 24,-10
+        - node:
+            cleanable: True
             zIndex: 1
             color: '#FFFFFFFF'
             id: DirtLight
@@ -2109,8 +2122,6 @@ entities:
             938: 28,1
             939: 29,1
             1077: 24,-11
-            1078: 24,-10
-            1079: 23,-10
             1080: 26,-12
             1081: 31,-12
             1082: 32,-11
@@ -2185,6 +2196,12 @@ entities:
             2470: -42,-13
             2741: -18,-9
             2742: -23,-12
+        - node:
+            cleanable: True
+            color: '#A4610696'
+            id: DirtMedium
+          decals:
+            3421: 25,-10
         - node:
             cleanable: True
             zIndex: 1
@@ -2658,6 +2675,8 @@ entities:
             1052: 28,-10
             1053: 29,-10
             1054: 30,-10
+            3415: 25,-10
+            3416: 23,-10
         - node:
             color: '#D381C93B'
             id: HalfTileOverlayGreyscale
@@ -11784,7 +11803,7 @@ entities:
       pos: 34.5,45.5
       parent: 30
     - type: Door
-      secondsUntilStateChange: -48347.26
+      secondsUntilStateChange: -48564.246
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -57026,6 +57045,9 @@ entities:
     - type: Transform
       pos: 29.5,-9.5
       parent: 30
+    - type: AccessReader
+      accessListsOriginal:
+      - - Salvage
 - proto: ComputerSalvageJobBoard
   entities:
   - uid: 23204
@@ -57045,6 +57067,18 @@ entities:
     components:
     - type: Transform
       pos: 35.5,-4.5
+      parent: 30
+- proto: ComputerShuttleSalvage
+  entities:
+  - uid: 7255
+    components:
+    - type: Transform
+      pos: 28.5,-9.5
+      parent: 30
+  - uid: 23884
+    components:
+    - type: Transform
+      pos: 32.5,-16.5
       parent: 30
 - proto: ComputerSolarControl
   entities:
@@ -69647,6 +69681,13 @@ entities:
     components:
     - type: Transform
       pos: 26.5,-24.5
+      parent: 30
+- proto: GasMinerPlasma
+  entities:
+  - uid: 23882
+    components:
+    - type: Transform
+      pos: 26.5,-30.5
       parent: 30
 - proto: GasMinerWaterVapor
   entities:
@@ -107347,15 +107388,15 @@ entities:
     - type: Transform
       pos: 26.5,-9.5
       parent: 30
-  - uid: 7255
-    components:
-    - type: Transform
-      pos: 28.5,-9.5
-      parent: 30
   - uid: 7256
     components:
     - type: Transform
       pos: 27.5,-9.5
+      parent: 30
+  - uid: 10292
+    components:
+    - type: Transform
+      pos: 25.5,-9.5
       parent: 30
 - proto: LockerScienceFilled
   entities:
@@ -133062,11 +133103,6 @@ entities:
     - type: Transform
       pos: -50.5,47.5
       parent: 30
-  - uid: 10292
-    components:
-    - type: Transform
-      pos: 25.5,-9.5
-      parent: 30
   - uid: 13970
     components:
     - type: Transform
@@ -133076,6 +133112,11 @@ entities:
     components:
     - type: Transform
       pos: 7.5,-26.5
+      parent: 30
+  - uid: 23883
+    components:
+    - type: Transform
+      pos: 24.5,-11.5
       parent: 30
 - proto: VendingMachineTheater
   entities:
