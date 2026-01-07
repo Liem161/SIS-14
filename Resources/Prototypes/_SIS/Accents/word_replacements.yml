@@ -1,5 +1,5 @@
 - type: accent
-  id: chatsanitize
+  id: ruchatsanitize
   wordReplacements:
     sis-chatsan-word-1: sis-chatsan-word-replace-1
     sis-chatsan-word-2: sis-chatsan-word-replace-2
