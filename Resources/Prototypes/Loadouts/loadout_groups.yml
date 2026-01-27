@@ -61,6 +61,10 @@
   - TowelColorMime
   - TowelColorSilver
   - TowelColorGold
+  # SIS-Practice_Guns Start
+  - WeaponDisablerPractice
+  - WeaponLaserCarbinePractice
+  # SIS-Practice_Guns End
 
 - type: loadoutGroup
   id: Glasses
