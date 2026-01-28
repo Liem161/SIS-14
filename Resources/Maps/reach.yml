@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 268.0.0
+  engineVersion: 270.1.0
   forkId: ""
   forkVersion: ""
-  time: 12/28/2025 17:52:30
-  entityCount: 2642
+  time: 01/27/2026 14:38:09
+  entityCount: 2641
 maps:
 - 1
 grids:
@@ -2186,7 +2186,7 @@ entities:
   - uid: 96
     components:
     - type: Transform
-      pos: -1.5,14.5
+      pos: -1.5352863,14.547528
       parent: 2
 - proto: BoxHandcuff
   entities:
@@ -7645,12 +7645,12 @@ entities:
     - type: Transform
       pos: 21.5,-3.5
       parent: 2
-- proto: DoorRemoteAll
+- proto: DoorRemoteCustom
   entities:
   - uid: 1056
     components:
     - type: Transform
-      pos: 24.577494,2.096348
+      pos: 24.562723,2.0902877
       parent: 2
 - proto: DrinkMugRainbow
   entities:
@@ -12431,13 +12431,6 @@ entities:
     components:
     - type: Transform
       pos: 4.470603,-3.5184174
-      parent: 2
-- proto: MiningDrill
-  entities:
-  - uid: 2642
-    components:
-    - type: Transform
-      pos: -1.5,14.5
       parent: 2
 - proto: MopBucket
   entities:
