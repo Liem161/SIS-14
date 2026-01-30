@@ -23,7 +23,7 @@
     - id: SnakeSpawn
     - id: SpiderClownSpawn
     # SIS-PsiMonkey Start
-    - id: BluePsiMonkeySpawn 
+    - id: BluePsiMonkeySpawn
     - id: RedPsiMonkeySpawn
     # SIS-PsiMonkey End
     - id: SpiderSpawn
@@ -38,6 +38,7 @@
     - id: RevenantSpawn
     - !type:NestedSelector
       tableId: DerelictBorgEventTable
+    - id: BansheeSpawn # SIS-Banshee
 
 - type: entityTable
   id: ModerateAntagEventsTable

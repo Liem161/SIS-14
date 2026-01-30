@@ -723,7 +723,7 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: diagonalGirder #SIS-DiagonalGirder
+        node: diagonalGirder # SIS-DiagonalGirder
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
@@ -1053,7 +1053,7 @@
         damage: 200
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: diagonalGirder #SIS-DiagonalGirder
+        node: diagonalGirder # SIS-DiagonalGirder
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam

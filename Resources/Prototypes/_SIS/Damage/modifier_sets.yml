@@ -1,0 +1,17 @@
+- type: damageModifierSet
+  id: Banshee
+  coefficients:
+    Blunt: -1
+    Slash: -1
+    Piercing: -1
+    Cold: -1
+    Poison: -1
+    Radiation: -1
+    Asphyxiation: -1
+    Bloodloss: -1
+    Cellular: -1
+    Holy: 65
+    Heat: -1
+    Structural: -1
+    Shock: -1
+    Caustic: -1

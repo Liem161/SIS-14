@@ -1,0 +1,160 @@
+- type: entity
+  parent:
+  - BaseMob
+  - MobCombat
+  id: MobBanshee
+  name: banshee
+  description: A dark, ghostly female figure. She is completely intangible.
+  components:
+  - type: Sprite
+    sprite: _SIS/Mobs/Ghosts/banshee.rsi
+    layers:
+    - state: banshee
+  - type: GhostTakeoverAvailable
+  - type: Physics
+    bodyStatus: InAir
+  - type: NoSlip
+  - type: Magboots
+  - type: MovementAlwaysTouching
+  - type: CanMoveInAir
+  - type: Damageable
+    damageContainer: BiologicalMetaphysical
+    damageModifierSet: Banshee
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Eye
+    drawFov: false
+    visMask:
+      - Normal
+      - Ghost
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.3
+        density: 100
+        mask:
+        - SmallMobMask
+        layer:
+        - SmallMobLayer
+  - type: GhostRole
+    makeSentient: true
+    name: ghost-role-information-banshee-name
+    description: ghost-role-information-banshee-description
+    rules: ghost-role-information-antagonist-rules
+    mindRoles:
+    - MindRoleGhostRoleSoloAntagonist
+    raffle:
+      settings: default
+  - type: Tag
+    tags:
+    - SlowImmune
+    - KnockdownImmune
+  - type: ActionGrant
+    actions:
+    - ActionRepulseScream
+    - ActionBansheeCurse
+  - type: Gun
+    fireRate: 0.75
+    projectileSpeed: 15
+    selectedMode: SemiAuto
+    clumsyProof: true
+    showExamineText: false
+    availableModes: [ SemiAuto ]
+    soundGunshot: /Audio/_SIS/Ghosts/Banshee/screech.ogg
+    soundEmpty: null
+  - type: RechargeBasicEntityAmmo
+    showExamineText: false
+    rechargeCooldown: 15
+    rechargeSound: null
+  - type: BasicEntityAmmoProvider
+    proto: BulletScreechSpread
+    capacity: 1
+    count: 1
+
+- type: entity
+  parent: ActionRepulse
+  id: ActionRepulseScream
+  name: "[color=purple]Repulse Scream[/color]"
+  description: Pushes entities away from the user.
+  components:
+  - type: RepulseAttract
+    speed: 13
+    range: 7
+  - type: Action
+    icon:
+      sprite: _SIS/Objects/Actions/banshee.rsi
+      state: repulse
+    useDelay: 15
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_SIS/Ghosts/Banshee/scream.ogg
+
+- type: entity
+  parent: BulletTaser
+  id: BulletScreech
+  name: deafening screech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: TimedDespawn
+    lifetime: 2
+  - type: Projectile
+    soundHit:
+      path: "/Audio/Weapons/Guns/Hits/bullet_hit.ogg"
+    damage:
+      types:
+        Cellular: 5
+  - type: StunOnCollide
+    stunAmount: 2
+    knockdownAmount: 2
+    drop: false
+    slowdownAmount: 2
+    walkSpeedModifier: 0.5
+    sprintSpeedModifier: 0.5
+  - type: Ammo
+    muzzleFlash: null
+  - type: Sprite
+    noRot: false
+    sprite: _SIS/Objects/Weapons/Guns/Projectiles/projectiles.rsi
+    color: "#770f87"
+    layers:
+    - state: scream
+      shader: unshaded
+
+- type: entity
+  parent: BulletScreech
+  id: BulletScreechSpread
+  name: deafening screech
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: ProjectileSpread
+    proto: BulletScreech
+    count: 3
+    spread: 7
+
+- type: entity
+  parent: BaseSmiteAction
+  id: ActionBansheeCurse
+  name: "[color=purple]Curse[/color]"
+  description: Curse a crew member you like, making them unrespawnable.
+  components:
+  - type: Action
+    useDelay: 0
+    sound: !type:SoundPathSpecifier
+      path: /Audio/_SIS/Ghosts/Banshee/curse.ogg
+    icon:
+      sprite: _SIS/Objects/Actions/banshee.rsi
+      state: curse
+  - type: EntityTargetAction
+    event: !type:ChangeComponentsSpellEvent
+      toAdd:
+      - type: Unrevivable
+        cloneable: true
+  - type: LimitedCharges
+    lastCharges: 1
