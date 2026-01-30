@@ -63,7 +63,7 @@
     - ActionBansheeCurse
   - type: Gun
     fireRate: 0.75
-    projectileSpeed: 15
+    projectileSpeed: 10
     selectedMode: SemiAuto
     clumsyProof: true
     showExamineText: false
@@ -72,7 +72,7 @@
     soundEmpty: null
   - type: RechargeBasicEntityAmmo
     showExamineText: false
-    rechargeCooldown: 15
+    rechargeCooldown: 20
     rechargeSound: null
   - type: BasicEntityAmmoProvider
     proto: BulletScreechSpread
@@ -107,9 +107,6 @@
   - type: Projectile
     soundHit:
       path: "/Audio/Weapons/Guns/Hits/bullet_hit.ogg"
-    damage:
-      types:
-        Cellular: 5
   - type: StunOnCollide
     stunAmount: 2
     knockdownAmount: 2
