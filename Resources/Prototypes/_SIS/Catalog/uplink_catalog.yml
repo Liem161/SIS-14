@@ -52,3 +52,16 @@
     Telecrystal: 13
   categories:
   - UplinkWeaponry
+
+- type: listing
+  id: UplinkMasterGloves
+  name: uplink-master-gloves-name
+  description: uplink-msater-gloves-desc
+  productEntity: MasterGloves
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 3
+  cost:
+    Telecrystal: 6
+  categories:
+  - UplinkWeaponry
