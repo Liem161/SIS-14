@@ -167,9 +167,6 @@
   - type: Icon
     sprite: _SIS/Mobs/Species/Kobold/parts.rsi
     state: full
-  - type: Body
-    prototype: Kobold
-    requiredLegs: 2
   - type: Sprite
     scale: 0.8, 0.7
   - type: NoSlip
