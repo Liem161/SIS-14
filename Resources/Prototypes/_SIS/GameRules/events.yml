@@ -23,3 +23,15 @@
     entries:
     - id: MobIcePsiMonkey
       prob: 0.02
+
+- type: entity
+  parent: BaseGameRule
+  id: BansheeSpawn
+  components:
+  - type: StationEvent
+    weight: 6
+    duration: 1
+    earliestStart: 30
+    minimumPlayers: 10
+  - type: RandomSpawnRule
+    prototype: MobBanshee

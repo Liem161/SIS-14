@@ -103,7 +103,7 @@ namespace Content.IntegrationTests.Tests
             "Exo",
             "Snowball",
             // SIS-Maps Start
-            "Atlas",
+            "Omega",
             // SIS-Maps End
         };
 
