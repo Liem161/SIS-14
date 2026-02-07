@@ -170,7 +170,7 @@
 - type: construction
   id: DiagonalShuttleWall
   name: construction-recipe-diagonal-shuttle-wall
-  graph: Girder
+  graph: DiagonalGirder # SIS
   startNode: start
   targetNode: diagonalshuttleWall
   category: construction-category-structures
@@ -1328,3 +1328,29 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+
+- type: construction
+  id: Bonfire
+  graph: Bonfire
+  startNode: start
+  targetNode: bonfire
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: BonfireStake
+  graph: Bonfire
+  startNode: start
+  targetNode: bonfireStake
+  category: construction-category-structures
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canRotate: false
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

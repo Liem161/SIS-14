@@ -574,7 +574,7 @@
       behaviors:
         - !type:SpawnEntitiesBehavior
           spawn:
-            Girder:
+            DiagonalGirder: # SIS
               min: 1
               max: 1
         - !type:DoActsBehavior
@@ -723,7 +723,7 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: diagonalGirder # SIS
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
@@ -731,6 +731,13 @@
         acts: ["Destruction"]
   - type: RadiationBlocker
     resistance: 5
+  # SIS-Start
+  - type: Construction
+    graph: DiagonalGirder
+    node: diagonalReinforcedWall
+  - type: StaticPrice
+    price: 285
+  # SIS-End
 
 # Riveting
 - type: entity
@@ -890,14 +897,14 @@
         damage: 300
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: diagonalGirder # SIS
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
   - type: Construction
-    graph: Girder
+    graph: DiagonalGirder # SIS
     node: diagonalshuttleWall
   - type: RadiationBlocker
     resistance: 5
@@ -1046,12 +1053,17 @@
         damage: 200
       behaviors:
       - !type:ChangeConstructionNodeBehavior
-        node: girder
+        node: diagonalGirder # SIS
       - !type:PlaySoundBehavior
         sound:
           collection: MetalSlam
       - !type:DoActsBehavior
         acts: ["Destruction"]
+  # SIS-Start
+  - type: Construction
+    graph: DiagonalGirder
+    node: diagonalSolidWall
+  # SIS-End
 
 - type: entity
   parent: WallSolid
@@ -1443,7 +1455,7 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          Girder:
+          DiagonalGirder: # SIS
             min: 1
             max: 1
       - !type:PlaySoundBehavior
@@ -1658,6 +1670,40 @@
   - type: IconSmooth
     key: cobblebricks
     base: cobblebrick
+
+- type: entity
+  parent: WallCobblebrick
+  id: WallIronsandCobblebrick
+  name: ironsand brick wall
+  description: The pale, rounded shapes that make up this wall look strikingly different from the iron sands they were allegedly made from.
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/cobblebrick_ironsand.rsi
+  - type: Icon
+    sprite: Structures/Walls/cobblebrick_ironsand.rsi
+  - type: IconSmooth
+    key: cobblebricks
+    base: cobblebrick
+  - type: RCDDeconstructable
+    deconstructable: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SteelOre1:
+            min: 0
+            max: 2
 
 # Cardboard
 

@@ -1,3 +1,8 @@
+# SPDX-FileCopyrightText: 2019-2025 Space Wizards Federation
+# SPDX-FileCopyrightText: 2026 Skill Issue Station contributors
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
 - type: entity
   id: Incorporeal
   save: false
@@ -68,10 +73,12 @@
     radius: 6
     castShadows: false
     enabled: false
-  # SIS-Ghost_Speed_Up Start
+  # SIS-Start
   - type: MovementSpeedModifier
     baseWalkSpeed: 24
-  # SIS-Ghost_Speed_Up End
+  - type: ShowJobIcons
+  - type: ShowMindShieldIcons
+  # SIS-End
 
 # proto for player ghosts specifically
 - type: entity
@@ -82,6 +89,13 @@
   - type: Tag
     tags: # BAD: Intentional removal of inherited tag
     - AllowGhostShownByEvent
+  # SIS-Start
+  - type: Respawn
+  - type: UserInterface
+    interfaces:
+      enum.RespawnUiKey.Key:
+        type: RespawnBoundUserInterface
+  # SIS-End
 
 - type: entity
   parent: BaseMentalAction

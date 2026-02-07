@@ -49,6 +49,11 @@
     price: 800
   - type: ResearchClient
   - type: TechnologyDatabase
+  - type: ApcPowerReceiver
+    powerLoad: 150
+  - type: PowerState
+    idlePowerDraw: 150
+    workingPowerDraw: 1000
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -387,7 +392,6 @@
     - SecurityAmmoStatic
     - SecurityWeaponsStatic
     dynamicPacks:
-    - SecurityModules # SIS-Security_Cyborg
     - SalvageSecurityBoards
     - SalvageSecurityWeapons
     - SecurityEquipment
@@ -396,6 +400,7 @@
     - SecurityAmmo
     - SecurityWeapons
     - SecurityDisablers
+    - SecurityModules # SIS
   - type: EmagLatheRecipes
     emagStaticPacks:
     - SyndicateAmmoStatic

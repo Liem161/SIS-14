@@ -1,0 +1,14 @@
+- files: ["screech.ogg"]
+  license: "CC0-1.0"
+  copyright: "twistedkingdom3"
+  source: "https://freesound.org/people/twistedkingdom3/sounds/746112/"
+
+- files: ["scream.ogg"]
+  license: "CC0-1.0"
+  copyright: "onderwish"
+  source: "https://freesound.org/people/onderwish/sounds/469141/"
+  
+- files: ["curse.ogg"]
+  license: "CC-BY-4.0"
+  copyright: "klankbeeld"
+  source: "https://freesound.org/people/klankbeeld/sounds/169976/"

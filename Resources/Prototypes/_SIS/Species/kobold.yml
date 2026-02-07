@@ -1,0 +1,11 @@
+- type: species
+  id: Kobold
+  name: species-name-kobold
+  roundStart: true
+  prototype: MobKoboldPerson
+  defaultSkinTone: "#34a223"
+  dollPrototype: AppearanceKobold
+  skinColoration: Hues
+  maleFirstNames: NamesReptilianMale
+  femaleFirstNames: NamesReptilianFemale
+  naming: FirstDashFirst

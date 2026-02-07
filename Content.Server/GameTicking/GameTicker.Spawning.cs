@@ -1,5 +1,5 @@
 // SPDX-FileCopyrightText: 2021-2025 Space Wizards Federation
-// SPDX-FileCopyrightText: 2025 SIS-14 contributors
+// SPDX-FileCopyrightText: 2025 Skill Issue Station contributors
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
@@ -206,7 +206,7 @@ namespace Content.Server.GameTicking
                     }
 
                     speciesId = roundStart.Count == 0
-                        ? SharedHumanoidAppearanceSystem.DefaultSpecies
+                        ? HumanoidCharacterProfile.DefaultSpecies
                         : _robustRandom.Pick(roundStart);
                 }
                 else
@@ -216,6 +216,7 @@ namespace Content.Server.GameTicking
                 }
 
                 character = HumanoidCharacterProfile.RandomWithSpecies(speciesId);
+                character.Appearance = HumanoidCharacterAppearance.EnsureValid(character.Appearance, character.Species, character.Sex);
             }
 
             // We raise this event to allow other systems to handle spawning this player themselves. (e.g. late-join wizard, etc)
