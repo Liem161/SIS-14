@@ -24,22 +24,49 @@
   components:
   - type: Sprite
     state: icon-red
-  - type: MeleeWeapon
-    attackRate: 0.75
-    angle: 0
-    damage:
-      types:
-        Blunt: 5
-    animation: WeaponArcFist
+  - type: Gun
+    fireRate: 0.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/syringe_gun.ogg
+    projectileSpeed: 15
+  - type: AmmoCounter
+  - type: Appearance
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 15
+    rechargeSound:
+      path: /Audio/Machines/lightswitch.ogg
+  - type: BasicEntityAmmoProvider
+    proto: BoltPyrokinesis
+    capacity: 3
+    count: 1
   - type: Construction
     graph: WeaponPsiPyroPka
     node: weaponPsiPyroPka
-  - type: IgniteOnMeleeHit
-    fireStacks: 1
-  - type: DisarmMalus
   - type: Tag
     tags: [ ]
 
+- type: entity
+  parent: WatcherBoltMagmawing
+  id: BoltPyrokinesis
+  name: pyrokinesis bolt
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Reflective
+    reflective:
+    - Energy
+  - type: Projectile
+    impactEffect: BulletImpactEffectOrangeDisabler
+    damage:
+      types:
+        Heat: 10
+  - type: ChangeTemperatureOnCollide
+    heat: 0
+  - type: IgniteOnCollide
+    fireStacks: 1
+    
 - type: entity
   name: White-Cryo Psi Accelerator
   parent: PsiPka
@@ -140,8 +167,8 @@
     useDelay: 60
     itemIconStyle: BigAction
     icon:
-      sprite: Objects/Weapons/Guns/Projectiles/projectiles_tg.rsi
-      state: omnilaser
+      sprite: _SIS/Objects/Actions/psipka.rsi
+      state: ability
   - type: TargetAction
     range: 120
     checkCanAccess: false

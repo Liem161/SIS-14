@@ -18,3 +18,4 @@ construction-graph-tag-red-brain = красный мозг
 construction-graph-tag-blue-brain = синий мозг
 ent-CryokinesPsiPkaRay = криокинетический снаряд
     .desc = Мощный заряд пси-энергии.
+ent-BoltPyrokinesis = пирокинетический снаряд
