@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RootNamespace>Content.Module.Common</RootNamespace>
+  </PropertyGroup>
+  <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
+  <Import Project="..\RobustToolbox\MSBuild\Robust.CompNetworkGenerator.targets" />
+
+  <Import Project="..\RobustToolbox\Imports\Shared.props" />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Content.ModuleManager\Content.ModuleManager.csproj" PrivateAssets="All" />
+  </ItemGroup>
+</Project>
