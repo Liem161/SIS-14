@@ -105,18 +105,22 @@ public sealed class ContentPoolManager : PoolManager<TestPair>
         var client = new[]
         {
             typeof(Client.Entry.EntryPoint).Assembly,
-            typeof(Content.SIS.Client.EntryPoint).Assembly, // SIS-Project
+            typeof(SIS.Client.Entry.EntryPoint).Assembly,
+            typeof(Module.Client.Entry.EntryPoint).Assembly,
         };
 
         var server = new[]
         {
             typeof(Server.Entry.EntryPoint).Assembly,
-            typeof(Content.SIS.Server.EntryPoint).Assembly, // SIS-Project
+            typeof(SIS.Server.Entry.EntryPoint).Assembly,
+            typeof(Module.Server.Entry.EntryPoint).Assembly,
         };
 
         var shared = extraAssemblies
             .Append(typeof(Shared.Entry.EntryPoint).Assembly)
-            .Append(typeof(Content.SIS.Shared.EntryPoint).Assembly) // SIS-Project
+            .Append(typeof(SIS.Shared.Entry.EntryPoint).Assembly)
+            .Append(typeof(Module.Shared.Entry.EntryPoint).Assembly)
+            .Append(typeof(Common.Data.Entry.EntryPoint).Assembly)
             .Append(typeof(PoolManager).Assembly)
             .ToArray();
 

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <OutputPath>..\bin\Content.Client\</OutputPath>
+    <WarningsAsErrors>RA0032;nullable</WarningsAsErrors>
+  </PropertyGroup>
+
+  <Import Project="../MSBuild/Content.props" />
+  <Import Project="..\RobustToolbox\MSBuild\Robust.Properties.targets" />
+
+  <Import Project="..\RobustToolbox\MSBuild\XamlIL.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.Annotations" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Content.Client\Content.Client.csproj" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Content.ModuleManager\Content.ModuleManager.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Content.Common.Data\Content.Common.Data.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Content.Module.UIKit\Content.Module.UIKit.csproj" PrivateAssets="All" />
+    <ProjectReference Include="..\Content.Module.Shared\Content.Module.Shared.csproj" PrivateAssets="All" />
+  </ItemGroup>
+</Project>
